@@ -20,8 +20,6 @@ mongoose.connect("mongodb://localhost/test", {});
 
 // index
 
-// localhost:3000/insert/namae/atai
-
 var send_mail = function (to, callback) {
 
     var mailer = require('nodemailer');
@@ -53,7 +51,15 @@ var send_mail = function (to, callback) {
 
 router.post('/api/contact', function (request, response, next) {
 
-    var postdata = new Doc(request.body);
+    var email = request.body.email;
+    var fname = request.body.fname;
+    var lname = request.body.lname;
+    var subject = request.body.subject;
+    var message = request.body.message;
+
+    var postdata = new Doc({email: email, fname: fname, lname: lname, subject: subject, message: message});
+
+    //var postdata = new Doc(request.body);
 
     postdata.save().then(function (saved_doc) {
         send_mail(request.body.email, (error) => {
