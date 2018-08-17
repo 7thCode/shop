@@ -105,5 +105,33 @@ router.delete('/api/contact/:email', function (request, response, next) {
 
 module.exports = router;
 
+/*
+var send_mail = function (to, callback) {
 
+    var mailer = require('nodemailer');
 
+    var mailsetting = {
+        "service": "gmail",
+        "auth": {
+            "user": "inbox.7thcode@gmail.com",
+            "pass": "33550336"
+        }
+    };
+
+    var smtp_user = mailer.createTransport(mailsetting); //SMTPの接続
+
+    var result_mail = {
+        from: "oda.mikio@gmail.com",
+        to: to,
+        bcc: "oda.mikio@gmail.com",
+        subject: "subject",
+        html: "Message"
+    };
+
+    smtp_user.sendMail(result_mail, function (error) {
+        callback(error);
+        smtpUser.close();
+    });
+
+};
+*/

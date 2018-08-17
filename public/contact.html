@@ -106,8 +106,7 @@
 						      </span>
                             </div>
                         </li>
-                        <li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i
-                                class="icon-shopping-cart"></i></span></a></li>
+                        <li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -115,8 +114,7 @@
         </div>
     </nav>
 
-    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner"
-            style="background-image:url(images/img_bg_2.jpg);">
+    <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_2.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -124,8 +122,7 @@
                     <div class="display-t">
                         <div class="display-tc animate-box" data-animate-effect="fadeIn">
                             <h1>Contact Us</h1>
-                            <h2>Free html5 templates Made by <a href="http://freehtml5.co"
-                                                                target="_blank">freehtml5.co</a></h2>
+                            <h2>Free html5 templates Made by <a href="http://freehtml5.co" target="_blank">freehtml5.co</a></h2>
                         </div>
                     </div>
                 </div>
@@ -151,9 +148,7 @@
                 </div>
                 <div class="col-md-6 animate-box">
                     <h3>Get In Touch</h3>
-
                     <form id="contact" action="#">
-
                         <div class="row form-group">
                             <div class="col-md-6">
                                 <!-- <label for="fname">First Name</label> -->
@@ -217,6 +212,7 @@
                                 <div id="introducer_label">
                                     <div class="require">required</div>
                                 </div>
+
                             </div>
                         </div>
 
@@ -225,12 +221,14 @@
                                 <!-- <label for="message">Message</label> -->
                                 <textarea name="message" id="message" cols="30" rows="10" class="form-control"
                                           placeholder="message"></textarea>
+
                             </div>
                         </div>
 
                         <div class="form-group">
                             <input type="button" onclick="Create();" value="Send Message" class="btn btn-primary">
                             <div id="complete" style="display:none;">complete</div>
+
                         </div>
 
                     </form>
@@ -389,7 +387,7 @@
         var form = document.forms["contact"];
         var success = is_valid(form[input].value, label, (form[input].value != ""));
         if (success) {
-             is_valid(form[input].value, label, form[input].value.match(regex_pattern(type)));
+            is_valid(form[input].value, label, form[input].value.match(regex_pattern(type)));
         }
     };
 
